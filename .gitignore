@@ -1,0 +1,7 @@
+node_modules
+.temp
+.cache
+dist
+dist.zip
+.idea
+.vuepress/dist/*
