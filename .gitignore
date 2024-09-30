@@ -5,3 +5,6 @@ dist
 dist.zip
 .idea
 .vuepress/dist/*
+.vuepress/.cache
+.vuepress/.temp
+.vuepress/dist

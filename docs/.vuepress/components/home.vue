@@ -28,7 +28,7 @@
 <script setup>
     import Skill from "./skill.vue"
 </script>
-<style scoped>
+<style scoped lang="css">
 
     .home{
         width: 100%;
@@ -55,7 +55,7 @@
     .right{
         width: 450px;
         height: 549px;
-        background: url("../public/assets/backgrounds//me.png")no-repeat left center;
+        background: url("../public/image/backgrounds/me.png")no-repeat left center;
         margin-left: 110px;
 
     }
