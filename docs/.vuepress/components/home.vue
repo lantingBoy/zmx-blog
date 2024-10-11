@@ -9,9 +9,9 @@
                     
                     <div class="nav">
                         <div class="createTaskItem">
-                            <a href="/article/xunkdas4/">个人简介</a></div>
+                            <a href="/zmx-blog/article/xunkdas4/">个人简介</a></div>
                         <div class="createTaskItem">
-                            <a href="/blog">前端笔记</a></div>
+                            <a href="/zmx-blog/blog">前端笔记</a></div>
                         <div class="createTaskItem">
                         <a href="https://github.com/lantingBoy">GitHub</a> </div>
 
@@ -162,4 +162,43 @@
         animation: rotate 5s linear infinite;
       }
     }
+
+    /* 针对所有移动设备 */
+@media screen and (max-width: 767px) {
+  /* 在这里编写针对移动设备的样式 */
+  .main{
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+  }
+  .words{
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .createTaskItem{
+    width: 100px;
+    height: 42px;
+    line-height: 42px;
+  }
+  .left{
+    flex: 1;
+    text-align: center;
+  }
+  .nav{
+    display: flex;
+    justify-content: center
+  }
+  .right{
+    display: none;
+  }
+  .skills{
+    max-width: 90%;
+  }
+  .skills img{
+    height: 20px;
+  }
+  .bg{
+    height: 100%;
+  }
+}
 </style>

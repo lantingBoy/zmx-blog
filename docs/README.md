@@ -69,7 +69,7 @@ config:
     type: image-text
     title: 老木求知者
     description: 前端开发
-    image: /skill.svg
+    image: /image/projects/room2.jpeg
     list:
       -
         title: 基础
@@ -93,28 +93,21 @@ config:
     image: /project.svg
     list:
       -
-        title: House730-香港楼市交易平台（https://m.house730.com/）
+        title: 微盟智慧酒店
         description: 该项目主要为香港用户提供各个地区新盘、二手房、租房、工商铺、新闻资讯等楼盘信息展示。项目包括H5端，PC端以及后台管理PMS端。
       -
-        title: 中原地产H5官网（https://m.sh.centanet.com/）
+        title: 微盟智慧旅游
         description: 中原地产展示买房、二手房、新房、租房信息，同时还提供定制找房、VR看房等线上看房服务。
       -
-        title: 智能可视化大屏配置项目
+        title: 微盟出海电商
         description: 智能化配置展示大屏。海量组件、模板一键复用，快速设计。拖拉拽快速搭建酷炫大屏。不同尺寸大屏灵活自适应展示。
       -
-        title: 智能BI大数据分析项目
-        description: 将设计好的仪表板和报表集成到各个平台，并能进行参数传递、图表联动/钻取、排序、过滤等自助分析操作。快速增强业务系统的数据可视化分析能力。
-      -
-        title: 智能虚拟数字人
-        description: 一站式虚拟人音视频内容生产，AIGC助力创作灵活高效；在虚拟制作中输入文本或录音，一键完成音、视频作品的输出，3分钟内渲染出稿。虚拟形象支持DIY捏脸，可进行多维度的模型捏脸，还可以进行人脸识别自动生成形象。以及支持个性化换装、动作，多种风格随意搭配。
-      -
-        title: 陕西移动网格中台项目
-        description: 陕西移动大数据管理平台，使省市县管理员在日常工作中更加高效快捷。
-      -
-        title: ......
+        title: 数字化中台
+        description: 基于qiankun搭建，使用Vue3 + Element-plus + TypeScript。集成了十几个微应用，实现了微前端的架构。
+      
   -
     type: profile
     name: 老木求知者-前端开发
-    description: 认真生活，简单做人，用心做事。
+    description: 简单做人，用心做事。
     avatar: /logo.png
 ---
