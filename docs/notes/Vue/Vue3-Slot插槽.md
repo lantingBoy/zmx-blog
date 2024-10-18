@@ -53,16 +53,18 @@ permalink: /Vue/a4wdq6kv/
 
 在父组件中，我们需要给多个模板定义名称，用来区分。需要注意的是`v-solt:name`，需要写在组件本身或者`template`标签包裹的模板。
 
-`v-solt:name` 可以简写为`:name`。
+`v-solt:name` 可以简写为`:name 或者 #name`。
 ```vue
 <template>
   <Son ref="son">
-    <template v-slot:title>
+    <template #title>
       <h1>我是title</h1>
     </template>
+   
     <template v-slot:content>
       <h1>我是content</h1>
     </template>
+
   </Son>
 </template>
 ```
@@ -76,20 +78,66 @@ permalink: /Vue/a4wdq6kv/
 </template>
 ```
 
+## 条件插槽
+有时你需要根据插槽是否存在来渲染某些内容。
+你可以结合使用 $slots 属性与 v-if 来实现。
+```vue
+<template>
+<div class="body">
+  <div v-if="$slots.header">
+    <slot name="header"></slot>
+  </div>
+  <div v-if="$slots.body">
+    <slot name="body"></slot>
+  </div>
+  <div v-if="$slots.footer">
+    <slot name="footer"></slot>
+  </div>
+</div>
+ </template>
+```
+
+## 动态插槽
+
+有时候我们需要动态参数去展示插槽名
+则可以定义下面这样的动态插槽：
+
+父组件：
+```vue
+<template v-slot:[dynamicSlotName]>
+    ...
+  </template>
+  <!-- 缩写为 -->
+  <template #[dynamicSlotName]>
+    ...
+  </template>
+```
+
+子组件：
+```vue
+<template>
+ <slot name="dynamic1"></slot>
+ <slot name="dynamic2"></slot>
+ <slot name="dynamic3"></slot>
+</template>
+```
+
 ## 作用域插槽
 
-作用域插槽可以实现在父组件中的插槽模板中使用子组件中暴露出来的数据。
-
-父组件接收数据使用
-
+在vue3中作用域插槽通常用于子组件向父组件传递数据
+```html
+	<!--reference  Vue3 slot插槽多层传递
+		https://blog.csdn.net/qq_32657473/article/details/130124381?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-130124381-blog-131728362.235%5Ev38%5Epc_relevant_sort_base1&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-130124381-blog-131728362.235%5Ev38%5Epc_relevant_sort_base1&utm_relevant_index=1
+	-->
+```
 ```vue
 <template>
   <Son ref="son">
-    <template v-slot:title="title">
+    <template #title="{message}">
       <!-- 这里也可以使用接结构 -->
       <!-- <template v-slot:title="{ message }">  -->
       <!-- <h1>{{ message }}</h1> -->
-      <h1>{{ title.message }}</h1>
+      <h1>{{ message }}</h1>
     </template>
     <template v-slot:content="content">
       <h1>{{ content.message }}</h1>

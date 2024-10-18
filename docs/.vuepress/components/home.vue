@@ -6,15 +6,13 @@
                     <div class="words">Hello, my name is </div>
                     <div class="words">lanting 🧑🏻‍💻</div>
                     <div class="gray">「十年饮冰，难凉热血。」</div>
-                    
                     <div class="nav">
                         <div class="createTaskItem">
                             <a href="/zmx-blog/article/xunkdas4/">个人简介</a></div>
                         <div class="createTaskItem">
-                            <a href="/zmx-blog/blog">前端笔记</a></div>
+                            <a href="/zmx-blog/blog/">前端笔记</a></div>
                         <div class="createTaskItem">
                         <a href="https://github.com/lantingBoy">GitHub</a> </div>
-
                     </div>
                 </div>
                 <div class="right"></div>

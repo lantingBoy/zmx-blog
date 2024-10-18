@@ -8,13 +8,34 @@ permalink: /Vue/93pg70vn/
 # Vue3-其他API
 
 ## shallowRef 
+使用场景：
+- 性能优化：当你有一个嵌套对象，只想让最外层是响应式。
+- 性能优化：如果你有一个嵌套对象，如果你不希望深层嵌套对象的变化而触发组件的重新渲染
+- 与triggerRef联用：由于shallowRef 不会触发依赖，因此需要手动调用 triggerRef去触发依赖更新。
+```js
+  import { shallowRef, triggerRef } from 'vue';
+  const shallowObj = shallowRef({
+    obj: {
+      a: 1
+    }
+  });
+  // 修改嵌套对象的属性
+  shallowObj.value.obj.a = 2;
+  // 手动触发更新
+  triggerRef(shallowObj);
+```
 
 
-`shallowRef`：`ref() `的浅层作用形式。只有第一层具有响应式。
+1. 当你需要一个深层的响应式对象，但是又不想让它的每个属性都变成响应式的。
+2. 当你需要一个深层的响应式对象，但是又不想让它的每个属性都变成响应式的。
 
-和 `ref()` 不同，浅层 ref 的内部值将会原样存储和暴露，并且不会被深层递归地转为响应式。只有对 `.value `的访问是响应式的。
+ shallowRef
 
- 换句话说只有`data.value = 'xx'`可以响应。再深层的`data.value.str = 'xxx'`不行。
+1. `shallowRef`：`ref() `的浅层作用形式。只有第一层具有响应式。
+
+2. 和 `ref()` 不同，浅层 ref 的内部值将会原样存储和暴露，并且不会被深层递归地转为响应式。只有对 `.value `的访问是响应式的。
+
+3. 换句话说只有`data.value = 'xx'`可以响应。再深层的`data.value.str = 'xxx'`不行。
 
 示例：
 

@@ -94,13 +94,13 @@ config:
     list:
       -
         title: 微盟智慧酒店
-        description: 该项目主要为香港用户提供各个地区新盘、二手房、租房、工商铺、新闻资讯等楼盘信息展示。项目包括H5端，PC端以及后台管理PMS端。
+        description: SaaS应用，为商户提供一站式的酒店服务操作，从预定到支付整个流程，包含C端 和B端。
       -
         title: 微盟智慧旅游
-        description: 中原地产展示买房、二手房、新房、租房信息，同时还提供定制找房、VR看房等线上看房服务。
+        description: 微盟的智慧旅游SaaS应用。
       -
         title: 微盟出海电商
-        description: 智能化配置展示大屏。海量组件、模板一键复用，快速设计。拖拉拽快速搭建酷炫大屏。不同尺寸大屏灵活自适应展示。
+        description: 微盟跨境电商项目，包含店铺装修，店铺投放，Google埋点等。
       -
         title: 数字化中台
         description: 基于qiankun搭建，使用Vue3 + Element-plus + TypeScript。集成了十几个微应用，实现了微前端的架构。
